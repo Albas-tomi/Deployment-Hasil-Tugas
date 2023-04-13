@@ -1,0 +1,209 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InputProduct component > renders correctly 1`] = `
+<div
+  className=" bg-slate-200 mx-auto flex flex-col items-center p-10 gap-10 "
+>
+  <form
+    data-testid="form"
+    name="form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="flex flex-col mb-3"
+    >
+      <label
+        className="text-xl"
+        htmlFor="name"
+      >
+        Name Product
+      </label>
+      <p
+        className="text-red-500"
+        data-testid="errors"
+      />
+      <input
+        className="rounded-md px-2"
+        id="name"
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="mb-3 rounded-md"
+    >
+      <label
+        className="text-xl"
+        htmlFor="category"
+      >
+        Product Category
+      </label>
+      <p
+        className="text-red-500"
+        data-testid="errorCategory"
+      />
+      <select
+        className="flex flex-col"
+        id="category"
+        name="category"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value="0"
+        >
+          Choose...
+        </option>
+        <option
+          value="Category 1"
+        >
+          One
+        </option>
+        <option
+          value="Category 2"
+        >
+          Two
+        </option>
+        <option
+          value="Category 3"
+        >
+          Three
+        </option>
+      </select>
+    </div>
+    <div
+      className="mb-3 flex flex-col"
+    >
+      <label
+        className="text-xl"
+        htmlFor="image"
+      >
+        Product Image
+      </label>
+      <p
+        className="text-red-500"
+        data-testid="errorImage"
+      />
+      <input
+        accept=".jpg,.jpeg,.png"
+        className="rounded-md"
+        id="image"
+        name="image"
+        onChange={[Function]}
+        type="file"
+      />
+    </div>
+    <label
+      className="text-xl mb-3 "
+      htmlFor="freshness"
+    >
+      Freshness
+    </label>
+    <div>
+      <p
+        className="text-red-500"
+        data-testid="errorFreshness"
+      />
+      <input
+        checked={false}
+        className="rounded-md m-3"
+        id="freshness"
+        name="freshness"
+        onChange={[Function]}
+        type="radio"
+        value="New brand"
+      />
+      <label
+        htmlFor="freshness"
+      >
+        New brand
+      </label>
+    </div>
+    <div>
+      <input
+        checked={false}
+        className="m-3"
+        id="name"
+        name="freshness"
+        onChange={[Function]}
+        type="radio"
+        value="Second brand"
+      />
+      <label
+        htmlFor="freshness"
+      >
+        Second brand
+      </label>
+    </div>
+    <div>
+      <input
+        checked={false}
+        className="m-3"
+        id="name"
+        name="freshness"
+        onChange={[Function]}
+        type="radio"
+        value="Old brand"
+      />
+      <label
+        htmlFor="freshness"
+      >
+        Old brand
+      </label>
+    </div>
+    <div
+      className="mb-3 flex flex-col"
+    >
+      <label
+        className="text-xl"
+        htmlFor="description"
+      >
+        Description Product
+      </label>
+      <p
+        className="text-red-500"
+        data-testid="errorDescription"
+      />
+      <textarea
+        className="rounded-md p-2"
+        id="description"
+        name="description"
+        onChange={[Function]}
+        rows={5}
+        type="number"
+        value=""
+      />
+    </div>
+    <div
+      className="mb-3 flex flex-col"
+    >
+      <label
+        className="text-xl"
+        htmlFor="price"
+      >
+        Price Product
+      </label>
+      <p
+        className="text-red-500"
+        data-testid="errorPrice"
+      />
+      <input
+        className="rounded-md px-2"
+        id="price"
+        name="price"
+        onChange={[Function]}
+        type="number"
+        value=""
+      />
+    </div>
+    <button
+      className="bg-green-700 hover:bg-green-800 rounded-md p-2"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
