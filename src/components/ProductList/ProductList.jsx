@@ -5,8 +5,8 @@ import { gql, useQuery, useSubscription } from "@apollo/client";
 import ReactPaginate from "react-paginate";
 
 
-const RETRIEVE_PRODUCTS_SUBSCRIBTION = gql`
-subscription MySubscription {
+const RETRIEVE_PRODUCTS = gql`
+query MyQuery {
     products {
       id
       name
@@ -24,7 +24,15 @@ function ProductList() {
 
   const productsPerPage = 5;
   const pageVisited =  pageNumber * productsPerPage;
-  const {loading, error, data} = useSubscription(RETRIEVE_PRODUCTS_SUBSCRIBTION);
+  const {loading, error, data} = useQuery(RETRIEVE_PRODUCTS,
+    {
+      refetchQueries:[
+        {
+          query: RETRIEVE_PRODUCTS
+      },
+      'MyQuery'
+      ]
+    });
 
   const displayProducts = data?.products.slice(0, users).slice(pageVisited, pageVisited + productsPerPage).map((product) => {
     return(
