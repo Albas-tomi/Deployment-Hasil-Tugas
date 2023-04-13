@@ -65,7 +65,15 @@ function EditProduct() {
     }
   });  
   const product = retrieveProduct?.products_by_pk;
-  const [updateProductById, { data, loading }] = useMutation( UPDATE_PRODUCT_BY_ID);
+  const [updateProductById, { data, loading }] = useMutation( UPDATE_PRODUCT_BY_ID,
+    {
+      refetchQueries:[
+        {
+          query: RETRIEVE_PRODUCTS
+      },
+      'MyQuery'
+      ]
+    });
 
 
   // console.log(product)

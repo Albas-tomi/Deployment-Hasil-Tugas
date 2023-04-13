@@ -27,7 +27,15 @@ mutation DeleteProductById($id:Int!) {
 `
 function ProductItemLogic() {
   const [deleteProductById, { data, loading , error}] = useMutation(
-    DELETE_PRODUCT);
+    DELETE_PRODUCT,
+    {
+      refetchQueries:[
+        {
+          query: RETRIEVE_PRODUCTS
+      },
+      'MyQuery'
+      ]
+    });
   const dispatch = useDispatch();
 
   const handleDeleteProduct = useCallback((id) => {
